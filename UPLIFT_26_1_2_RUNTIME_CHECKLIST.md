@@ -13,17 +13,17 @@ Use this checklist after installing the newly built plugin jar.
 
 - [X] Custom stack size applies to configured item (example: POTION 16)
 - [ ] Non-configured item keeps vanilla max stack size
-- [ ] /stack command (HAND) behaves correctly
-- [ ] /stack command (ALL) behaves correctly
+- [X] /stack command (HAND) behaves correctly
+- [X] /stack command (ALL) behaves correctly
 - [X] /stacks reload applies changes after config edit
 
 ## Inventory and Interaction Flows
 
 - [X] Inventory click merge/split behaves correctly with custom stack sizes
-- [ ] Hopper transfer (InventoryMoveItemEvent) respects custom stack sizes
+- [X] Hopper transfer (InventoryMoveItemEvent) respects custom stack sizes
 - [X] Item pickup by player/entity respects custom stack sizes
-- [ ] Furnace smelt output respects custom stack sizes
-- [ ] Dispenser output respects custom stack sizes
+- [X] Furnace smelt output respects custom stack sizes
+- [X] Dispenser output respects custom stack sizes
 
 ## Consumables and Buckets
 
@@ -33,24 +33,24 @@ Use this checklist after installing the newly built plugin jar.
 
 ## Damageable Items
 
-- [ ] Damageable item stack behavior is stable
-- [ ] No duplication or durability anomalies observed
+- [X] Damageable item stack behavior is stable
+- [X] No duplication or durability anomalies observed
 
 ## Modern vs Legacy Mode
 
 - [X] Default mode (use-legacy-reflection: false) is stable
-- [ ] Optional legacy mode test completed (if needed)
-- [ ] In legacy mode, no critical regressions observed
+- [X] Optional legacy mode test completed (if needed)
+- [X] In legacy mode, no critical regressions observed
 
-## Folia/Paper Scheduling
+## Paper Scheduling
 
-- [ ] Delayed item update tasks execute correctly
-- [ ] No scheduler-related exceptions under load
+- [X] Delayed item update tasks execute correctly
+- [X] No scheduler-related exceptions under load
 
 ## Cleanup Behavior
 
-- [ ] auto-stack-cleanup true removes stale custom max-stack metadata
-- [ ] auto-stack-cleanup false preserves custom metadata as expected
+- [X] auto-stack-cleanup true removes stale custom max-stack metadata
+- [X] auto-stack-cleanup false preserves custom metadata as expected
 
 ## Logging and Stability
 

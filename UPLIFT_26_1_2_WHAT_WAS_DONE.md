@@ -234,8 +234,8 @@ Successful package build.
 
 Generated artifacts:
 
-* `target/inventorystacks-2.7.0-MC26-BETA.jar`
-* `target/original-inventorystacks-2.7.0-MC26-BETA.jar`
+* `target/inventorystacks-2.7.0-MC26.jar`
+* `target/original-inventorystacks-2.7.0-MC26.jar`
 
 ---
 
