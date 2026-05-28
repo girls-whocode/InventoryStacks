@@ -1,0 +1,85 @@
+# General Settings
+
+check-for-updates: true # Check for new plugin updates
+
+# Use mini messages
+# Allows for clickable links, actions and more.
+# https://www.spigotmc.org/threads/minimessage-rich-text-messages-made-easy.433454/
+
+use-mini-message: false
+
+# Stack command
+# Default Stack Type = HAND / ALL
+# Hand stacks all items player is holding
+# All stacks all the items in the player's inventory
+# Command = /stack or /stack [HAND/ALL]
+
+stack-command:
+  enabled: true
+  default-stack-type: 'HAND'
+  
+# Minecraft 1.20.5+ ONLY
+# When TRUE, forces legacy reflection-based stack handling instead of ItemMeta
+# May improve performance on large servers with many custom stack updates
+# Known limitation: container GUIs may not reflect updated stack sizes (only visual)
+# Restart your server when toggling this setting
+  
+use-legacy-reflection: false
+
+# Minecraft 1.20.5+ ONLY
+# This setting only applies when "use-legacy-reflection" is false
+# When TRUE, an item that is not listed in "items" section, it will reset to default vanilla amount
+# This only applies when it has a custom stack amount to avoid overuse
+
+auto-stack-cleanup: true
+  
+# Update rate for buckets, drinkable items, and damageable items
+# This is an option because on folia it needs more of a delay to work correctly
+# This is in ticks
+
+item-change-delay: 2
+
+# This setting will enable a max stack amount for ALL items in the game and make them all the same size
+
+max-stack-for-all-items:
+  enabled: false # Disabled by default
+  amount: 1
+  whitelist: # This is a whitelist of items that won't be included
+  - DIAMOND_PICKAXE
+
+# Max Item Stack Sizes
+# Format = MATERIAL NAME : STACK SIZE
+# (This list of items will also work with max-stack-for-all-items if enabled)
+
+items:
+  POTION: 16
+  # SPLASH_POTION: 16
+
+############################################################################
+#                                                                          #
+#   This section applies when:                                             #
+#                                                                          #
+#   - Minecraft version is earlier than 1.20.5                             #
+#   - OR "use-legacy-reflection" is enabled                                #
+#                                                                          #
+############################################################################
+
+
+# Disallow stacked items/tools in anvils to be applied
+
+disallow-stacked-anvil-items: true
+    
+# Update players inventory after merging stacked items (not required for 1.18+)
+# This makes it look cleaner when items are stacked
+
+update-inventory-on-merge: true
+
+# This option prevents the glitch that happens when you combine a damageable item (not required for 1.17+)
+# Without this, the items could combine and then durability will also combine to undamaged items
+
+prevent-shift-combining-damageable-items: true
+
+# Make brewing stands not be able to stack potions (not required for 1.20.6+)
+# This makes it so brewing stands only allow 1 potion in the potion slot
+
+one-potion-per-slot: true
