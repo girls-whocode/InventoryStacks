@@ -1,4 +1,50 @@
-.github
-.vscode
-target
-logs
+# Build output
+build/
+target/
+out/
+
+# Release artifacts generated locally
+releases/
+
+# Logs
+logs/
+*.log
+
+# Gradle
+.gradle/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+nbproject/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Java
+hs_err_pid*
+replay_pid*
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+
+# Generated artifacts
+*.jar
+*.war
+*.ear
