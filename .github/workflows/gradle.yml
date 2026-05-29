@@ -15,22 +15,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up JDK 25
+      - name: Set up JDK 21 for Gradle runtime
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Set up JDK 25 for compilation
         uses: actions/setup-java@v4
         with:
           java-version: '25'
           distribution: 'temurin'
 
       - name: Build with Gradle Wrapper
+        env:
+          JAVA_HOME: ${{ env.JAVA_HOME_21_X64 }}
+          ORG_GRADLE_PROJECT_org.gradle.java.installations.paths: ${{ env.JAVA_HOME_25_X64 }}
         run: |
           chmod +x ./gradlew
           ./gradlew clean build --stacktrace --info --no-daemon
-
-      - name: Debug Java and Gradle
-        run: |
-          java -version
-          ./gradlew --version
-          ls -la
-
-      - name: Build with Gradle Wrapper
-        run: ./gradlew clean build --stacktrace --info

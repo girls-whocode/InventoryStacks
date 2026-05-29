@@ -31,7 +31,11 @@ dependencies {
 group = "com.codingguru"
 version = "2.7.0-MC26"
 description = "inventorystacks"
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(25))
+    }
+}
 
 publishing {
     publications.create<MavenPublication>("maven") {
@@ -41,6 +45,7 @@ publishing {
 
 tasks.withType<JavaCompile>() {
     options.encoding = "UTF-8"
+    options.release.set(25)
 }
 
 tasks.withType<Javadoc>() {
