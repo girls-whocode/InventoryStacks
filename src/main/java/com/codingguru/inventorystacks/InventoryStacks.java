@@ -35,6 +35,9 @@ public class InventoryStacks extends JavaPlugin {
 		saveDefaultConfig();
 		
 		ItemHandler.getInstance().setup();
+		if (!isEnabled()) {
+			return;
+		}
 
 		getCommand("stack").setExecutor(new StackCmd());
 		getCommand("stacks").setExecutor(new ReloadCmd());
