@@ -169,7 +169,8 @@ public class InventoryClick implements Listener {
 		if (VersionUtil.v1_17_R1.isServerVersionHigher())
 			return;
 
-		if (!InventoryStacks.getInstance().getConfig().getBoolean("prevent-shift-damageable-items-stack"))
+		if (!InventoryStacks.getInstance().getConfig().getBoolean("prevent-shift-combining-damageable-items",
+				InventoryStacks.getInstance().getConfig().getBoolean("prevent-shift-damageable-items-stack")))
 			return;
 
 		if (!e.isShiftClick())

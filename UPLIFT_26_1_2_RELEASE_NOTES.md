@@ -31,10 +31,10 @@ This release focuses on uplift readiness for Minecraft 26.1.2 (Paper API generat
 
 ## Build Output
 Primary artifact:
-- `target/inventorystacks-2.7.0-MC26.jar`
+- `target/inventorystacks-2.7.1-MC26.jar`
 
 Secondary artifact:
-- `target/original-inventorystacks-2.7.0-MC26.jar`
+- `target/original-inventorystacks-2.7.1-MC26.jar`
 
 ## Build Command
 Use JDK 25 for this release:

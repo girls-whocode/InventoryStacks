@@ -30,6 +30,7 @@ public class ReloadCmd implements CommandExecutor {
 		}
 
 		InventoryStacks.getInstance().reloadConfig();
+		InventoryStacks.getInstance().reloadMessaging();
 		ItemHandler.getInstance().reloadInventoryStacks();
 		MessagesUtil.sendMessage(sender, MessagesUtil.RELOAD.toString());
 		return false;

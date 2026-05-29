@@ -71,6 +71,26 @@ public class InventoryStacks extends JavaPlugin {
 		ConsoleUtil.sendPluginEndSetup();
 	}
 
+	public void onDisable() {
+		closeAdventure();
+	}
+
+	public void reloadMessaging() {
+		closeAdventure();
+
+		if (getConfig().getBoolean("use-mini-message")) {
+			this.adventureAPI = BukkitAudiences.create(this);
+		}
+	}
+
+	private void closeAdventure() {
+		if (this.adventureAPI == null)
+			return;
+
+		this.adventureAPI.close();
+		this.adventureAPI = null;
+	}
+
 	public BukkitAudiences getAdventure() {
 		return this.adventureAPI;
 	}

@@ -5,6 +5,7 @@
 plugins {
     `java-library`
     `maven-publish`
+    alias(libs.plugins.shadow)
 }
 
 repositories {
@@ -29,7 +30,7 @@ dependencies {
 }
 
 group = "com.codingguru"
-version = "2.7.0-MC26"
+version = "2.7.1-MC26"
 description = "inventorystacks"
 java {
     toolchain {
@@ -50,4 +51,41 @@ tasks.withType<JavaCompile>() {
 
 tasks.withType<Javadoc>() {
     options.encoding = "UTF-8"
+}
+
+tasks.shadowJar {
+    archiveClassifier.set("")
+    mergeServiceFiles()
+    exclude("META-INF/license/**")
+    exclude("META-INF/*")
+    exclude("META-INF/maven/**")
+    exclude("LICENSE")
+    exclude("NOTICE")
+    exclude("/*.txt")
+    exclude("build.properties")
+    exclude("com/cryptomorin/xseries/XEnchantment*")
+    exclude("com/cryptomorin/xseries/XEntityType*")
+    exclude("com/cryptomorin/xseries/XEntity*")
+    exclude("com/cryptomorin/xseries/XSound*")
+    exclude("com/cryptomorin/xseries/XBiome*")
+    exclude("com/cryptomorin/xseries/NMSExtras*")
+    exclude("com/cryptomorin/xseries/NoteBlockMusic*")
+    exclude("com/cryptomorin/xseries/SkullCacheListener*")
+    exclude("com/cryptomorin/xseries/art/**")
+    exclude("com/cryptomorin/xseries/profiles/**")
+    exclude("com/cryptomorin/xseries/reflection/**")
+    exclude("com/cryptomorin/xseries/particles/**")
+    exclude("com/cryptomorin/xseries/messages/**")
+    exclude("com/cryptomorin/xseries/inventory/**")
+    exclude("com/cryptomorin/xseries/paper/**")
+    exclude("com/cryptomorin/xseries/XTag*")
+    exclude("com/cryptomorin/xseries/XWorldBorder*")
+}
+
+tasks.jar {
+    enabled = false
+}
+
+tasks.build {
+    dependsOn(tasks.shadowJar)
 }
