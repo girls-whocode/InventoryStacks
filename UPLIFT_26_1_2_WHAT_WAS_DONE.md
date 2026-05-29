@@ -293,6 +293,8 @@ Minecraft/Paper 26.1.2 requires Java 25 classfile compatibility.
 * `build.gradle.kts`
 * `gradle.properties`
 * `gradle/libs.versions.toml`
+* `.github/workflows/gradle.yml`
+* `/home/jessica/.gradle/gradle.properties`
 
 **Changes:**
 
@@ -300,11 +302,12 @@ Minecraft/Paper 26.1.2 requires Java 25 classfile compatibility.
 * Configured `shadowJar` as the primary Gradle artifact.
 * Disabled the plain Gradle jar so CI upload only publishes the dependency-inclusive plugin jar.
 * Mirrored the Maven shade exclusions for trimmed XSeries packaging.
-* Configured Gradle itself to run on Java 21 while resolving Java 25 as the compile toolchain.
+* Configured GitHub Actions to write hosted Java 21 and Java 25 paths to runner-local `~/.gradle/gradle.properties`.
+* Configured Jessica's local Gradle user properties to run Gradle on local Java 21 while resolving local Java 25 as the compile toolchain.
 
 **Reason:**
 CI uploaded `build/libs/*.jar`, but Gradle previously produced a plain jar without bundled runtime dependencies.
-Gradle 8.14.3's Kotlin DSL bootstrap does not parse the local Java `25.0.2` runtime version cleanly, so the build process must run on Java 21 and compile with the Java 25 toolchain.
+Gradle 8.14.3's Kotlin DSL bootstrap does not parse the local Java `25.0.2` runtime version cleanly, so the build process must run on Java 21 and compile with the Java 25 toolchain. The Java 21 runtime path is intentionally not committed in project `gradle.properties` because GitHub-hosted runners use different installation paths.
 
 #### 4. Fixed MiniMessage Reload Lifecycle
 
