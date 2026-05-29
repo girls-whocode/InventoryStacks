@@ -27,5 +27,11 @@ jobs:
       - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
+      - name: Debug Java and Gradle
+        run: |
+          java -version
+          ./gradlew --version
+          ls -la
+
       - name: Build with Gradle Wrapper
-        run: ./gradlew build
+        run: ./gradlew clean build --stacktrace --info
