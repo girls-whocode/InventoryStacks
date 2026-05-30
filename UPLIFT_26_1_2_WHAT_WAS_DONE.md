@@ -434,6 +434,23 @@ Generated artifacts:
 * `target/inventorystacks-2.7.2-MC26.jar`
 * `target/original-inventorystacks-2.7.2-MC26.jar`
 
+#### 4. Automatic Release Publishing
+
+**File:**
+
+* `.github/workflows/gradle.yml`
+
+**Changes:**
+
+* Added repository `contents: write` permission for release publishing.
+* Reads the plugin version from `src/main/resources/plugin.yml`.
+* On `master` pushes, creates a `v<version>` tag when missing.
+* Creates the GitHub Release automatically when the release for that tag is missing.
+* Keeps manual `v*` tag pushes supported.
+
+**Reason:**
+Pushing a version bump should publish the matching release without requiring a separate manual tag or artifact upload.
+
 ### Working
 
 * Project compiles successfully under Java 25.
