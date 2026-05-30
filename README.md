@@ -8,7 +8,7 @@ This repository is currently uplifted for the MC26 line.
 
 ### Current build in this repository
 
-- Plugin version: `2.7.1-MC26`
+- Plugin version: `2.7.2-MC26`
 - Target server API: Paper `26.1.2.build.66-stable`
 - Required Java runtime and build toolchain: Java `25`
 
@@ -56,7 +56,7 @@ https://www.spigotmc.org/resources/%E2%AD%90-inventorystacks-%E2%AD%90-change-de
 1. Confirm your server is on Paper-compatible `26.1.x` generation.
 2. Confirm Java `25` is installed and used by your server startup.
 3. Build or use the packaged artifact:
-	- `target/inventorystacks-2.7.1-MC26.jar`
+	- `target/inventorystacks-2.7.2-MC26.jar`
 4. Place the jar into your server `plugins` folder.
 5. Start the server once to generate default config files.
 6. Edit `config.yml` and restart or run `/stacks reload`.
@@ -71,8 +71,8 @@ JAVA_HOME=/path/to/your/jdk-25 PATH=/path/to/your/jdk-25/bin:$PATH mvn -q -Dskip
 
 Expected artifacts:
 
-- `target/inventorystacks-2.7.1-MC26.jar`
-- `target/original-inventorystacks-2.7.1-MC26.jar`
+- `target/inventorystacks-2.7.2-MC26.jar`
+- `target/original-inventorystacks-2.7.2-MC26.jar`
 
 ## Key Configuration
 

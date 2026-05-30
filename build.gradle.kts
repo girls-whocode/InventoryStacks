@@ -30,7 +30,7 @@ dependencies {
 }
 
 group = "com.codingguru"
-version = "2.7.1-MC26"
+version = "2.7.2-MC26"
 description = "inventorystacks"
 java {
     toolchain {

@@ -1,5 +1,5 @@
 name: InventoryStacks
-version: 2.7.1-MC26
+version: 2.7.2-MC26
 api-version: 1.20
 main: com.codingguru.inventorystacks.InventoryStacks
 authors: [CodingGuru]

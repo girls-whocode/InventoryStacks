@@ -234,8 +234,8 @@ Successful package build.
 
 Generated artifacts:
 
-* `target/inventorystacks-2.7.1-MC26.jar`
-* `target/original-inventorystacks-2.7.1-MC26.jar`
+* `target/inventorystacks-2.7.2-MC26.jar`
+* `target/original-inventorystacks-2.7.2-MC26.jar`
 
 ---
 
@@ -245,7 +245,7 @@ Generated artifacts:
 
 ### Completed Work
 
-#### 1. Released Maintenance Patch 2.7.1-MC26
+#### 1. Released Maintenance Patch 2.7.2-MC26
 
 **Files:**
 
@@ -257,7 +257,7 @@ Generated artifacts:
 
 **Changes:**
 
-* Updated project version from `2.7.0-MC26` to `2.7.1-MC26`.
+* Updated project version from `2.7.1-MC26` to `2.7.2-MC26`.
 * Updated documented build artifact names to the new version.
 
 #### 2. Made Java 25 the Default WSL Java for Jessica
@@ -411,7 +411,7 @@ Successful build.
 
 Generated artifact:
 
-* `build/libs/inventorystacks-2.7.1-MC26.jar`
+* `build/libs/inventorystacks-2.7.2-MC26.jar`
 
 Confirmed shaded dependencies are present in the Gradle jar, including:
 
@@ -431,8 +431,8 @@ Successful package build.
 
 Generated artifacts:
 
-* `target/inventorystacks-2.7.1-MC26.jar`
-* `target/original-inventorystacks-2.7.1-MC26.jar`
+* `target/inventorystacks-2.7.2-MC26.jar`
+* `target/original-inventorystacks-2.7.2-MC26.jar`
 
 ### Working
 
